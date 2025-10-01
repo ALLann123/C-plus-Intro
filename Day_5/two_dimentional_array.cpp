@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main()
+{
+    //2 Dimentional arrays
+
+    std::string cars[][3]={{"Mustang", "Escape", "F-150"}, 
+                           {"Corvett", "Equinox", "Silverado"},
+                           {"Challenger", "Durango", "Ram 1500"}};
+    
+    int rows=sizeof(cars)/sizeof(cars[0]);
+    int columns=sizeof(cars[0])/sizeof(cars[0][0]);
+
+    std::cout<<"Rows: "<<rows<<" "<<"Columns: "<<columns<<"\n";
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<columns; j++)
+        {
+            //display element
+            std::cout<<cars[i][j]<<" ";
+        }
+        std::cout<<std::endl;
+    }
+    return 0;
+}
